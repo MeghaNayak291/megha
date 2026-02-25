@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megha | Personal Blog</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f4f1ed;
+    color:#2b2b2b;
+}
+
+/* Navigation */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:25px;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+nav a, nav .disabled{
+    text-decoration:none;
+    color:#333;
+    position:relative;
+    transition:0.3s ease;
+}
+
+nav .disabled{
+    color:#ccc;
+    cursor:not-allowed;
+    opacity:0.5;
+}
+
+nav a:not(.disabled){
+    cursor:pointer;
+}
+
+nav a:not(.disabled)::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#c49a6c;
+    transition:0.4s ease;
+}
+
+nav a:not(.disabled):hover::after{
+    width:100%;
+}
+
+/* Hero Section */
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 10%;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:1.7;
+    color:#555;
+}
+
+.accent-line{
+    width:60px;
+    height:3px;
+    background:#c49a6c;
+    margin:25px 0;
+    border-radius:5px;
+}
+
+.hero-img img{
+    width:320px;
+    border-radius:20px;
+    transition:0.5s ease;
+}
+
+.hero-img img:hover{
+    transform:scale(1.05);
+}
+
+/* Blog Section */
+.blog-section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.blog-section h2{
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    margin-bottom:50px;
+}
+
+.blog-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.blog-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    transition:0.4s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.blog-card h3{
+    margin-bottom:15px;
+}
+
+.blog-card p{
+    font-size:14px;
+    color:#666;
+}
+
+/* Footer */
+footer{
+    margin-top:80px;
+    padding:30px;
+    text-align:center;
+    font-size:14px;
+    background:#e8e3dc;
+}
+
+footer span{
+    color:#c49a6c;
+    font-weight:500;
+}
+
+@media(max-width:768px){
+    .hero{
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <span class="disabled">BIO</span>
+    <span class="disabled">PORTFOLIO</span>
+    <span class="disabled">PODCAST</span>
+    <a href="/">BLOG</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hello, I’m Megha</h1>
+        <div class="accent-line"></div>
+        <p>
+            A passionate storyteller, creative thinker, and digital explorer. 
+            I write about life, ideas, emotions, and everything in between.
+        </p>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Profile Image">
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section">
+    <h2>Latest Thoughts</h2>
+
+    <div class="blog-container">
+
+        <div class="blog-card">
+            <h3>The Art of Letting Go</h3>
+            <p>Sometimes strength is found not in holding on, but in choosing to release.</p>
+        </div>
+
+        <div class="blog-card">
+            <h3>Midnight Creativity</h3>
+            <p>Why our deepest thoughts arrive when the world falls silent.</p>
+        </div>
+
+        <div class="blog-card">
+            <h3>Digital Minimalism</h3>
+            <p>Living softly in a loud digital world.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 <span>Megha</span> | Designed with simplicity & elegance
+</footer>
+
+</body>
+</html>
